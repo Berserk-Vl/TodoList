@@ -1,0 +1,322 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#mainHeader {
+    display: flex;
+    flex-direction: row;
+    width: 1100px;
+    height: 80px;
+    margin: 0 auto; 
+    background-color: lightgray;
+}
+
+#searchByNameInput {
+    width: 240px;
+    height: 50px;
+    margin: 15px auto 15px 18px;
+    font-size: 20px; 
+    background-color: darkgray;
+}
+
+#foundTasksList {
+    width: 240px;
+    height: 400px;
+    overflow: auto;
+    position: absolute;
+    top: 80px;
+    margin-left: 18px;
+    background-color: rgba(169, 169, 169);
+}
+
+.taskCardSmall {
+    display: flex;
+    flex-direction: row; 
+    width: 210px;
+    height: 80px;
+    margin: 5px;
+    background-color: lightgray;
+}
+
+.taskAllTextSmall,
+.taskAdditionalInfoSmall {
+    display: flex;
+    margin: auto;
+    height: 70px;
+    overflow: auto;
+}
+
+.taskAllTextSmall {
+    flex-direction: column;
+    width: 160px;
+}
+
+.taskNameHeadingSmall {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.finishedCheckboxSmall {
+    width: 20px;
+    height: 20px;
+    margin: auto 0;
+}
+
+.taskDateLabelSmall {
+    margin: auto 0 0 auto;
+    font-size: 12px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto 0;
+}
+
+#sideBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 855px;
+    width: 260px;
+    background-color: rgb(250, 250, 250);
+}
+
+.dayRangeButton {
+    border: none;
+    width: 220px;
+    height: 50px;
+    margin: 20px auto 0 auto;
+    font-size: 24px;
+    background-color: rgb(199, 199, 199);
+}
+
+.dayRangeButton:active {
+    background-color: rgb(231, 231, 231);
+}
+
+#datePicker {
+    display: block;
+    width: 220px;
+    margin: 20px auto 20px auto;
+}
+
+#headerDatePicker {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(231, 231, 231);
+}
+
+#monthYearDatePicker {
+    margin: 0 auto 0 auto;
+}
+
+#yearInput {
+    border: none;
+}
+
+#yearInput:invalid {
+    background-color: red;
+}
+
+#monthSelect {
+    border: none;
+    border-bottom: 2px solid rgb(199, 199, 199);
+}
+
+#monthSelect:hover {
+    background-color: rgb(199, 199, 199);
+}
+
+#monthSelect,
+#yearInput,
+#yearInput:valid {
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    font-size: large;
+    background-color: rgb(231, 231, 231);
+}
+
+#previousMonthButton,
+#nextMonthButton {
+    border: 1px solid black;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+#weekDatePicker {
+    display: flex;
+    flex-direction: row;
+    padding: 8px 0px 8px 3px;
+}
+
+.dayNameLabel {
+    display: block;
+    margin: auto;
+    padding-left: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.dayNameLabel,
+.dayDatePickerButton {
+    width: 28px;
+    height: 20px;
+}
+
+.dayDatePickerButton {
+    text-align: right;
+    font-size: 10px;
+    margin: 1px 0px;
+    padding: 1px;
+}
+
+.today {
+    background-color: salmon;
+    border-color: darksalmon;
+}
+
+.daysRange {
+    background-color: orange;
+    border-color: orange;
+}
+
+.collapse {
+    visibility: collapse;
+}
+
+#tasksListArea,
+#tasksList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(233, 233, 233);
+}
+
+#tasksListArea {
+    width: 840px;
+    height: 850px;
+}
+
+#tasksListAreaHeader{
+    display: flex;
+    flex-direction: row;
+}
+
+#currentDate{
+    margin: auto auto auto 0;
+}
+
+#sortByDateButton{
+    margin: auto 0 auto auto;
+}
+
+#tasksList {
+    width: 820px;
+    height: 810px;
+    overflow: auto;
+}
+
+#sortByDateButton {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+}
+
+#sortByDateButton:hover {
+    cursor: pointer;
+}
+
+#tasksListAreaHeader,
+.taskCard {
+    width: 760px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.taskCard {
+    display: flex;
+    flex-direction: row;
+    height: 140px;
+    background-color: lightgray;
+}
+
+.taskAllText,
+.taskAdditionalInfo {
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    margin: auto;
+}
+
+.taskAllText {
+    width: 630px;
+}
+
+.taskAdditionalInfo {
+    width: 100px;
+}
+
+.taskNameHeading {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px auto auto 5px;
+}
+
+
+.taskShortDescription{
+    overflow: auto;
+    margin: auto;
+    text-indent: 3ch;
+}
+
+.finishedCheckbox {
+    width: 40px;
+    height: 40px;
+    margin: auto 0 auto auto;
+}
+
+.taskDateLabel {
+    margin: auto 0 0 auto;
+    font-size: 12px;
+}
+
+#taskDialog {
+    width: 550px;
+    height: 750px;
+}
+
+#taskDialogHeader {
+    display: flex;
+    flex-direction: row;
+}
+
+#finishedCheckboxTaskDialog {
+    width: 60px;
+    height: 60px;
+    margin: auto 0 auto auto;
+}
+
+#nameTaskDialog{
+    margin: auto;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#fullDescriptionTaskDialog {
+    height: 550px;
+    font-size: 18px;
+    text-indent: 3ch;
+    overflow: auto;
+}
+
+#doneButton {
+    display: block;
+    margin: auto 0 0 auto;
+}

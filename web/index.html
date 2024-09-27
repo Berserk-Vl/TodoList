@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link href="styles/style.css" rel="stylesheet" type="text/css" />
+        <title>Todo List</title>
+    </head>
+    <body>
+        <header id="mainHeader">
+            <input id="searchByNameInput" type="search" placeholder="Search by Name" />
+        </header>
+        <main>
+            <div id="sideBar">
+                <button class="dayRangeButton" id="todayButton">Today</button>
+                <button class="dayRangeButton" id="forWeekButton">For a Week</button>
+                <input id="dateDate" type="date" hidden />
+                <div id="datePicker">
+                    <div id="headerDatePicker">
+                        <button id="previousMonthButton">&lt;</button>
+                        <div id="monthYearDatePicker">
+                            <select id="monthSelect">
+                                <option value="Jan">Jan</option>
+                                <option value="Feb">Feb</option>
+                                <option value="Mar">Mar</option>
+                                <option value="Apr">Apr</option>
+                                <option value="May">May</option>
+                                <option value="Jun">Jun</option>
+                                <option value="Jul">Jul</option>
+                                <option value="Aug">Aug</option>
+                                <option value="Sep">Sep</option>
+                                <option value="Oct">Oct</option>
+                                <option value="Nov">Nov</option>
+                                <option value="Dec">Dec</option>
+                            </select>
+                            <input id="yearInput" type="number" />
+                        </div>
+                        <button id="nextMonthButton">&gt;</button>
+                    </div>
+                    <div id="weekDatePicker">
+                        <label class="dayNameLabel" id="SuLabel">Su</label>
+                        <label class="dayNameLabel" id="MoLabel">Mo</label>
+                        <label class="dayNameLabel" id="TuLabel">Tu</label>
+                        <label class="dayNameLabel" id="WeLabel">We</label>
+                        <label class="dayNameLabel" id="ThLabel">Th</label>
+                        <label class="dayNameLabel" id="FrLabel">Fr</label>
+                        <label class="dayNameLabel" id="SaLabel">Sa</label>
+                    </div>
+
+                    <div id="daysDatePicker">
+                        <div class="rowDaysDatePicker">
+                            <button class="dayDatePickerButton" id="day0Button">31</button>
+                            <button class="dayDatePickerButton" id="day1Button">-</button>
+                            <button class="dayDatePickerButton" id="day2Button">-</button>
+                            <button class="dayDatePickerButton" id="day3Button">-</button>
+                            <button class="dayDatePickerButton" id="day4Button">-</button>
+                            <button class="dayDatePickerButton" id="day5Button">-</button>
+                            <button class="dayDatePickerButton" id="day6Button">-</button>
+                        </div>
+                        <div class="rowDaysDatePicker">
+                            <button class="dayDatePickerButton" id="day7Button">-</button>
+                            <button class="dayDatePickerButton" id="day8Button">-</button>
+                            <button class="dayDatePickerButton" id="day9Button">-</button>
+                            <button class="dayDatePickerButton" id="day10Button">-</button>
+                            <button class="dayDatePickerButton" id="day11Button">-</button>
+                            <button class="dayDatePickerButton" id="day12Button">-</button>
+                            <button class="dayDatePickerButton" id="day13Button">-</button>
+                        </div>
+                        <div class="rowDaysDatePicker">
+                            <button class="dayDatePickerButton" id="day14Button">-</button>
+                            <button class="dayDatePickerButton" id="day15Button">-</button>
+                            <button class="dayDatePickerButton" id="day16Button">-</button>
+                            <button class="dayDatePickerButton" id="day17Button">-</button>
+                            <button class="dayDatePickerButton" id="day18Button">-</button>
+                            <button class="dayDatePickerButton" id="day19Button">-</button>
+                            <button class="dayDatePickerButton" id="day20Button">-</button>
+                        </div>
+                        <div class="rowDaysDatePicker">
+                            <button class="dayDatePickerButton" id="day21Button">-</button>
+                            <button class="dayDatePickerButton" id="day22Button">-</button>
+                            <button class="dayDatePickerButton" id="day23Button">-</button>
+                            <button class="dayDatePickerButton" id="day24Button">-</button>
+                            <button class="dayDatePickerButton" id="day25Button">-</button>
+                            <button class="dayDatePickerButton" id="day26Button">-</button>
+                            <button class="dayDatePickerButton" id="day27Button">-</button>
+                        </div>
+                        <div class="rowDaysDatePicker">
+                            <button class="dayDatePickerButton" id="day28Button">-</button>
+                            <button class="dayDatePickerButton" id="day29Button">-</button>
+                            <button class="dayDatePickerButton" id="day30Button">-</button>
+                            <button class="dayDatePickerButton" id="day31Button">-</button>
+                            <button class="dayDatePickerButton" id="day32Button">-</button>
+                            <button class="dayDatePickerButton" id="day33Button">-</button>
+                            <button class="dayDatePickerButton" id="day34Button">-</button>
+                        </div>
+                        <div class="rowDaysDatePicker">
+                            <button class="dayDatePickerButton" id="day35Button">-</button>
+                            <button class="dayDatePickerButton" id="day36Button">-</button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <input id="unfinishedTasksCheckbox" type="checkbox" />
+                    <label for="unfinishedTasksCheckbox">Only unfinished</label>
+                </div>
+            </div>
+            <div id="tasksListArea">
+                <header id="tasksListAreaHeader">
+                    <div id="currentDate"></div>
+                    <button id="sortByDateButton">= Sort by date</button>
+                </header>
+                <div id="tasksList"></div>
+            </div>
+        </main>
+        <dialog id="taskDialog">
+            <header id="taskDialogHeader">
+                <div>
+                    <div id="nameTaskDialog">Name</div>
+                    <span id="dateTaskDialog">01.01.1970</span>
+                </div>
+                <input
+                    id="finishedCheckboxTaskDialog"
+                    type="checkbox"
+                    disabled
+                />
+            </header>
+            <hr>
+            <div id="fullDescriptionTaskDialog">Full description</div>
+            <button id="doneButton" class="dayRangeButton">Done</button>
+        </dialog>
+        <script src="scripts/main.js"></script>
+    </body>
+</html>
