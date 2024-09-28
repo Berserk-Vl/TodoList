@@ -25,13 +25,25 @@ const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "
 var tasks = [];
 
 var searching = false;
+var searchInputFocused = false;
 var sortDirection = "=";
 
+document.getElementsByTagName("body")[0].addEventListener("click", () => {
+    if (searching && !searchInputFocused) {
+        hideFoundTasksList();
+    }
+});
 document.getElementById("todayButton").addEventListener("click", todayButtonEventHandler);
 document.getElementById("forWeekButton").addEventListener("click", forWeekButtonEventHandler);
 
 searchByNameInput.addEventListener("keyup", searchByNameInputEventHandler);
-searchByNameInput.addEventListener("focusin", searchByNameInputEventHandler);
+searchByNameInput.addEventListener("focusin", () => {
+    searchInputFocused = true;
+    searchByNameInputEventHandler();
+});
+searchByNameInput.addEventListener("focusout", () => {
+    searchInputFocused = false;
+});
 previousMonthButton.addEventListener("click", previousMonthButtonEventHandler);
 monthSelect.addEventListener("change", monthSelectEventHandler);
 yearInput.addEventListener("change", yearInputEventHandler);
@@ -376,7 +388,6 @@ function taskCardEventHandler(element) {
     taskDialog.showModal();
     if (searching) {
         hideFoundTasksList();
-        searching = false;
     }
 }
 
